@@ -37,11 +37,11 @@ body {
     border-radius: 50%;
     z-index: -1;
     background: conic-gradient(hsl(120 100% 70%),
-    hsl(120 100% 40%),
-    hsl(120 100% 70%) var(--progress, 0%),
-    var(--track-bg) var(--progress, 0%) 100%);
--webkit-mask-image: radial-gradient(transparent var(--holesize),
-    black calc(var(--holesize) + 0.5px));
-mask-image: radial-gradient(transparent var(--holesize),
-    black calc(var(--holesize) + 0.5px));
+        hsl(120 100% 40%),
+        hsl(120 100% 70%) var(--progress, 0%),
+        var(--track-bg) var(--progress, 0%) 100%);
+    -webkit-mask-image: radial-gradient(transparent var(--holesize),
+        black calc(var(--holesize) + 0.5px));
+    mask-image: radial-gradient(transparent var(--holesize),
+        black calc(var(--holesize) + 0.5px));
 }
