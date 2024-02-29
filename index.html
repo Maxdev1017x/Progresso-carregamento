@@ -4,14 +4,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
     <title>Barra de Progresso Circular</title>
+    <link rel="stylesheet" href="./src/styles/style.css">
 </head>
 <body>
-    <div class="RadialProgress" role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" aria-label="Progresso de 25%"></div>
-    <label for="progressInput">Ajuste o progresso:</label>
-    <input id="progressInput" type="range" value="25" min="0" max="100" aria-label="Ajuste o progresso" />
+    <div id="radialProgress" class="RadialProgress" role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" aria-label="Progresso de 25%"></div>
+    <label id="progressLabel" for="progressInput">Ajuste o progresso:</label>
+    <input id="progressInput" type="range" value="25" min="0" max="100" aria-labelledby="progressLabel"/>
 
-    <script src="script.js" defer></script>
+    <script src="./src/scripts/main.js"></script>
 </body>
 </html>

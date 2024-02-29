@@ -1,0 +1,47 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    display: grid;
+    place-content: center;
+    background: #000;
+    color: #fff;
+}
+
+.RadialProgress {
+    --hue: 220;
+    --holesize: 60%;
+    --track-bg: hsl(0, 0%, 99%);
+    height: 50vmin;
+    width: 50vmin;
+    place-items: center;
+    position: relative;
+    font-size: 50px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.RadialProgress::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border-radius: 50%;
+    z-index: -1;
+    background: conic-gradient(hsl(120 100% 70%),
+    hsl(120 100% 40%),
+    hsl(120 100% 70%) var(--progress, 0%),
+    var(--track-bg) var(--progress, 0%) 100%);
+-webkit-mask-image: radial-gradient(transparent var(--holesize),
+    black calc(var(--holesize) + 0.5px));
+mask-image: radial-gradient(transparent var(--holesize),
+    black calc(var(--holesize) + 0.5px));
+}
